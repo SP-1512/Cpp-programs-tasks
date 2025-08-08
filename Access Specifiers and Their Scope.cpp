@@ -35,6 +35,14 @@ void deposit(float amount) {
         }
     }
 
+    void checkAccountno() {
+        cout << "\nAccount Number : " << accountno << "is Active" << endl;
+    }
+    
+    void checkAccountname() {
+        cout << "\nAccount Holder : " << name << endl;
+    }
+    
     void checkBalance() {
         cout << "\nAccount Holder : " << name << endl;
         cout << "Account Number : " << accountno << endl;
@@ -42,7 +50,7 @@ void deposit(float amount) {
     }
     
     void balanceonly(){
-    cout << "Current Balance: " << balance << endl;	
+    cout << "\nCurrent Balance: " << balance << endl;	
 	}
 
 };
@@ -58,7 +66,7 @@ int main(){
 	Account A(accountno,name,balance);
 	
 
-	cout << "Enter the value of the task you want to perform: \n1. Deposit\n2.Withdraw\n.3.Display info" << endl;
+	cout << "Enter the value of the task you want to perform: \n1. Deposit\n2.Withdraw\n3.Display info\n4.Check Balance\n5.Check-Accountname\n6.Check Account Number" << endl;
 	cin >> t;
 	
 	switch(t){
@@ -77,6 +85,15 @@ int main(){
         case 3:
         	A.checkBalance();
         	break;
+        case 4:
+            A.balanceonly();
+            break;
+        case 5:
+            A.checkAccountname();
+            break;
+        case 6:
+            A.checkAccountno();
+            break;
         default :
         	cout << "Invalid choice" << endl;
 	}
