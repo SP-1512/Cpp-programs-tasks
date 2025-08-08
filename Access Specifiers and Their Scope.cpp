@@ -40,6 +40,10 @@ void deposit(float amount) {
         cout << "Account Number : " << accountno << endl;
         cout << "Current Balance: " << balance << endl;
     }
+    
+    void balanceonly(){
+    cout << "Current Balance: " << balance << endl;	
+	}
 
 };
 
@@ -54,7 +58,7 @@ int main(){
 	Account A(accountno,name,balance);
 	
 
-	cout << "Enter the value of the task you want to perform : \n1. Deposit\n2.Withdraw\n.3.Display info" << endl;
+	cout << "Enter the value of the task you want to perform: \n1. Deposit\n2.Withdraw\n.3.Display info" << endl;
 	cin >> t;
 	
 	switch(t){
@@ -62,13 +66,13 @@ int main(){
 			cout << "\nEnter the amount credited into the account: ";
             cin >> d;
             A.deposit(d);
-            A.checkBalance();
+            A.balanceonly();
             break;
         case 2:
         	cout << "Enter the amount debited from the account: ";
             cin >> w;
             A.withdraw(w);
-            A.checkBalance();
+            A.balanceonly();
             break;
         case 3:
         	A.checkBalance();
